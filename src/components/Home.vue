@@ -4,8 +4,8 @@
     <button @click="generate()" class="button is-normal">Make it so</button>
     <br>
     <div class="container box">
-      <span id="fa-icon" v-if="selectedIcon">
-        <i :class="selectedIcon"></i>
+      <span id="fa-icon" class="icon is-large is-vcentered">
+        <i :class="selectedIcon + ' fa-7x'"></i>
       </span>
     </div>
 
@@ -20,7 +20,8 @@ export default {
       iconArray: [
         'fal fa-abacus',
         'fal fa-magic',
-        'fal fa-alicorn'
+        'fal fa-alicorn',
+        'fal fa-angry'
       ],
       selectedIcon: null
     }
@@ -40,12 +41,13 @@ export default {
 </script>
 
 <style scoped>
-.box {
-  padding: 100px;
+button {
+  margin: 20px;
 }
-
-fa-icon {
-  width: 50px;
+.box {
+  width: 300px;
+  height: 300px;
+  padding: 100px;
 }
 
 </style>
