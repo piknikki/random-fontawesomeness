@@ -8,9 +8,10 @@
     <br>
     <div class="container box">
       <span id="fa-icon" class="icon is-large is-vcentered">
-           <i :class="'fal fa-' + selectedIcon + ' fa-7x'"></i>
+           <i v-bind:style="mycolor"  :class="'fal fa-' + selectedIcon + ' fa-7x'"></i>
       </span>
     </div>
+<!--    <h1 >{{ mycolor }}</h1>-->
   </div>
 </template>
 
@@ -19,6 +20,9 @@ export default {
   name: 'app',
   data () {
     return {
+      mycolor: {
+        color: '#' + (Math.random() * 0xFFFFFF << 0).toString(16)
+      },
       iconArray: [
         'abacus',
         'magic',
