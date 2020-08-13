@@ -4,10 +4,10 @@
     <h1 class="title">Random Fontawesome Icon Generator</h1>
     <p>(click refresh on your browser to see a new one)</p>
 <!--    <button v-on:click="generate()" class="button is-normal">Make it so</button>-->
+<!--    TODO:  add button to spin icon once it's loaded by adding :class="fa-spin" when clicked -->
     <br>
     <div class="container box">
       <span id="fa-icon" class="icon is-large is-vcentered">
-<!--        <pre>{{ htmlCode() }}</pre>-->
            <i :class="'fal fa-' + selectedIcon + ' fa-7x'"></i>
       </span>
     </div>
@@ -79,12 +79,6 @@ export default {
     }
   },
   methods: {
-    // htmlCode () {
-    //   let html = '<i class="fa-7x '
-    //   html += this.selectedIcon
-    //   html += '"></i>'
-    //   return html
-    // },
     randomItem (items) {
       return items[Math.floor(Math.random() * items.length)]
     },
